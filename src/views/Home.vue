@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
-    <Home/>
-    <p>Home</p> 
-  </div>
+  <h1>Homapage</h1>
+  <Home/>
+ 
+  
 </template>
 
 <script>
