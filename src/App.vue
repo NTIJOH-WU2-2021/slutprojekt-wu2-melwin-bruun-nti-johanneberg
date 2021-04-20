@@ -2,9 +2,9 @@
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/Chuck_Noris_Jokes">Chuck Noris Jokes</router-link> |
-    <router-link to="/Trupms_quotes">Trupms quotes</router-link> |
+    <router-link to="/TrumpQuotes">Trupms quotes</router-link> |
     <router-link to="/Advice_For_you">Advice For you</router-link> |
-  </div>./components/landing_page.vue
+  </div>
   <router-view/>
 </template>
 
