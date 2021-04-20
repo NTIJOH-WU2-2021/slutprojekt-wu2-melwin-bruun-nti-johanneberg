@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import chuck_noris from '../views/chuck_noris.vue'
+import ChuckNorisJokes from '../views/chuck_noris.vue'
+import TrumpQuotes from '../views/trump.vue'
+import AdviceForYou from '../views/advice.vue'
 
 const routes = [
   {
@@ -10,18 +12,18 @@ const routes = [
   },
   {
     path: '/Chuck_Noris_Jokes',
-    name: 'Chuck_Noris_Jokes',
-    component: Chuck_Noris_Jokes,
+    name: 'chuck',
+    component: ChuckNorisJokes,
   },
   {
-    path: "/Trupms_quotes",
-    name: "Trupms_quotes",
-    component: Trupms_quotes,
+    path: "/TrumpQuotes",
+    name: "trump",
+    component: TrumpQuotes,
  },
  {
   path: "/Advice_For_you",
-  name: "Advice_For_you",
-  component: Advice_For_you
+  name: "advice",
+  component: AdviceForYou
  },
   
 ]
