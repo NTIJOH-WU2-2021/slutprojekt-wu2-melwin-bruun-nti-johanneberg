@@ -1,10 +1,10 @@
 <template>
-   <p>hello</p>
+    <p>hemo</p>
 </template>
 
 <script>
 export default {
-  name: 'landing',
+  name: 'Home',
   props: {
     msg: String
   }
