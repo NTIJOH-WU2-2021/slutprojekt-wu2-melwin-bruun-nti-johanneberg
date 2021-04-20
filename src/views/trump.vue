@@ -1,17 +1,20 @@
 <template>
   <div class="about">
+    <TrumpQuotes/>
     <h1>This is an trump page</h1>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import landing from '@/components/landing_page.vue'
+
+import TrumpQuotes from "@/components/TrumpQuotes.vue";
+
 
 export default {
   name: 'trump',
   components: {
-    trump
+    TrumpQuotes
   }
 }
 </script>
