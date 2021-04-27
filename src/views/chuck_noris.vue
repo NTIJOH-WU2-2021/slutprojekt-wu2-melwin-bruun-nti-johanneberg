@@ -1,6 +1,8 @@
 <template>
-  <div class="about">
+  <div class="rubrik">
     <h1>This is an norris page</h1>
+  </div>
+  <div class="main">
     <ChuckNorisJokes/>
   </div>
 </template>
