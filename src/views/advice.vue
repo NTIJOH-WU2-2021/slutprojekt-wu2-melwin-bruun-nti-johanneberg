@@ -1,8 +1,10 @@
 <template>
-  <div class="about">
-    <h1>This is an Advice page</h1>
-    <AdviceForYou/>
-  </div>
+<div class="rubrik"> 
+  <h1>This is an Advice page</h1>
+</div>
+<div class="main">
+  <AdviceForYou/>
+</div>
 </template>
 
 
