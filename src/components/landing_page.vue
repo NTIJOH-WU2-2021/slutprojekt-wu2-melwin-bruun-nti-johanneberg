@@ -1,18 +1,27 @@
 <template>
+  <div class="box">
     <h2>Dette är en Chuck Noris Jokes API.</h2>
-    <img class="picture" :src="require('./assets/chucknorris.png')"/>
-
+    <img alt="CHUCK bild" class="picture" src="../assets/chucknorris.png"/>
+    <router-link to="/Chuck_Noris_Jokes">Chuck Noris Jokes</router-link> 
+  </div>
+  <div class="box">
     <h2>Dette är en Trump Quotes API.</h2>
-    <img class="picture" :src="require('./assets/trump.jpg')"/>
-
+    <img alt="trump bild" class="picture1" src="../assets/trump.jpg"/>
+    <router-link to="/TrumpQuotes">Trupms quotes</router-link> 
+  </div>
+  <div class="box">
     <h2>Dette är en Advice For you API.</h2>
-    <img class="picture" :src="require('./assets/advice.jpg')"/>
+    <img alt="advice bild" class="picture" src="../assets/advice.jpg"/>
+    <router-link to="/Advice_For_you">Advice For you</router-link> 
+  </div>
 </template>
 
 <script>
+
 export default {
   name: 'LandningPage',
   components:{
+    
     
   },
 }
@@ -32,6 +41,10 @@ li {
   margin: 0 10px;
 }
 a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+a:hover {
   color: #42b983;
 }
 
@@ -39,4 +52,18 @@ a {
   height: 20rem;
   width: 30rem;
 }
+
+.picture1{
+  height: 25rem;
+  width: 20rem;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
 </style>
