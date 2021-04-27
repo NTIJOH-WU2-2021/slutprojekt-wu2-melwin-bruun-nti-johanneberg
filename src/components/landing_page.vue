@@ -1,13 +1,20 @@
 <template>
-    <p>hemo</p>
+    <h2>Dette är en Chuck Noris Jokes API.</h2>
+    <img class="picture" :src="require('./assets/chucknorris.png')"/>
+
+    <h2>Dette är en Trump Quotes API.</h2>
+    <img class="picture" :src="require('./assets/trump.jpg')"/>
+
+    <h2>Dette är en Advice For you API.</h2>
+    <img class="picture" :src="require('./assets/advice.jpg')"/>
 </template>
 
 <script>
 export default {
-  name: 'Home',
-  props: {
-    msg: String
-  }
+  name: 'LandningPage',
+  components:{
+    
+  },
 }
 </script>
 
@@ -26,5 +33,10 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.picture{
+  height: 20rem;
+  width: 30rem;
 }
 </style>
