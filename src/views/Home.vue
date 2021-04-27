@@ -1,7 +1,7 @@
 <template>
   
   <div class="rubrik">
-      <h1>This is a start page</h1>
+      <h1>Tre APIER, tre mögligheter för storhet</h1>
   </div>
   <div class="main">
     <LandningPage/>
@@ -20,3 +20,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
