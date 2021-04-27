@@ -1,3 +1,8 @@
+<template>
+    <p>Trump hemo</p>
+</template>
+
+
 <script>
 // @ is an alias to /src
 
