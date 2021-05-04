@@ -1,22 +1,60 @@
 <template>
   <div class="rubrik">
-    <h1>This is an trump page</h1>
+    <h1>Search for trump quotes</h1>
   </div>
+  <img alt="trump bild" class="picture1" src="../assets/trump.jpg"/>
+  <form class="pure-form">
+    <input
+      type="text"
+      class="pure-input"
+      placeholder="Sök på key word"
+    />
+  </form>
   <div class="main">
-    <TrumpQuotes/>
+    <Jokes/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import TrumpQuotes from "@/components/TrumpQuotes.vue";
+import Jokes from '@/components/jokesTemplate.vue'
 
 
 export default {
   name: 'trump',
   components: {
-    TrumpQuotes
+    Jokes
   }
+
+  /*to do anropa apiet vid sökning skicka som en prop till jokes*/
+  /*methoed lägga till för onclick*/
+  
 }
 </script>
+
+
+<style scoped>
+
+.picture{
+  height: 20rem;
+  width: 30rem;
+}
+
+.picture1{
+  height: 25rem;
+  width: 20rem;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 30rem;
+  height: 30rem;
+  background-color: sandybrown;
+
+}
+
+</style>
