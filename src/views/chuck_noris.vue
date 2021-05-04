@@ -1,22 +1,46 @@
 <template>
   <div class="rubrik">
-    <h1>This is an norris page</h1>
+    <h1>Random Chuck Noris Jokes</h1>
   </div>
+  <img alt="CHUCK bild" class="picture" src="../assets/chucknorris.png"/>
   <div class="main">
-    <ChuckNorisJokes/>
+    <Jokes/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import ChuckNorisJokes from "@/components/chuck_noris_jokes.vue";
-
+import Jokes from '@/components/jokesTemplate.vue'
+/*to do anropa apiet vid sökning skicka som en prop till jokes*/
+/*gör created i dem andra fallen*/ 
 
 export default {
   name: 'chuck',
   components: {
-    ChuckNorisJokes
+    Jokes
   }
 }
 </script>
+
+
+<style scoped>
+
+.picture{
+  height: 20rem;
+  width: 30rem;
+}
+
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 30rem;
+  height: 30rem;
+  background-color: lightblue;
+
+}
+
+</style>
