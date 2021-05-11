@@ -22,9 +22,10 @@ export default {
 </script>
 
 <style scoped>
-main{
+.main{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 </style>
