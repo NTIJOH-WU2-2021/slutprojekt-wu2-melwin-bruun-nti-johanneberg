@@ -21,8 +21,15 @@
  Det frågor jag har he hur jag skall få in apiererna på hemsidan i nuläget samt vilka funkiner jag skall ge dem,
  Jag vill lära mig mer om är emit samt olika funktioner i vue så jag kan lösa problemen som kan komma på bästa sätet
 
- ## lektion-04-27
+ ## lektion-05-04
  Det jag gjorde idag va att förbreda alla sidor med en gemensam jokes form för att sedan kunna implimera in det på kortet sen.
  Det jag lärde mig idag var hur man skulle använde sem olika apierna där jag skall använde meteod eller creat för att kunna få fram rätt infromation
  Dem frågor som jag har nu är hur jag skall vå in alla olika svar på hemsidorna,
  JAg vill lära mer om emit och hur jag skall skriva metoderna. 
+
+ ## lektion-05-11
+
+det jag gjorde idag va att påbörja dem hämta dem olika aperierna och sedan sicka in dem i componets. samt små css i hela sidan.
+det jag lärde mig idag hur man använder fetch samt .then i vue för att skriva funktioner.
+den frågan jag har nu är varför kan jag inte impolera in rätt information på sidan.
+jag vill lära mig mer om props och metoder för att spara infromation. 
