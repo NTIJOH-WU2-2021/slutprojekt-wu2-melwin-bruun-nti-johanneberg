@@ -4,7 +4,7 @@
   </div>
   <img alt="CHUCK bild" class="picture" src="../assets/chucknorris.png"/>
   <div class="main">
-    <Jokes/>
+    <Jokes :thejoke = 'joke' />
   </div>
 </template>
 
@@ -19,7 +19,31 @@ export default {
   name: 'chuck',
   components: {
     Jokes
-  }
+  },
+  data(){
+    return{
+      joke: {}
+    }
+
+  },
+
+  created(){
+
+    fetch("https://api.chucknorris.io/jokes/random").then((response) => {
+        if (!response.ok) {
+          throw new Error("reload page.");
+        } else {
+          // Annars konverterar vi svaret till ett JS objekt
+          return response.json();
+        }        
+      }).then((joke) => {
+        console.log(joke)
+        this.joke = 'Card of chuck jokes',`${joke.value},`
+      })
+
+  
+
+  },
 }
 </script>
 
