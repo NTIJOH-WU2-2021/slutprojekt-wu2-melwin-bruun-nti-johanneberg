@@ -1,6 +1,6 @@
 <template>
-    <h2>Card of your jokes/advice/qoutes</h2>
-    <p>{{ card}}</p>
+    <h2>{{theitem.title}}</h2>
+    <p>{{theitem.value}}</p>
 
 
     
@@ -16,6 +16,10 @@ export default {
   name: 'Jokes',
   components: {
    
+  },
+  props:{
+    theitem: Object
+
   }
 }
 </script>
