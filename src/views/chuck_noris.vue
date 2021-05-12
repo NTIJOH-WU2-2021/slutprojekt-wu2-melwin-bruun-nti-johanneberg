@@ -38,7 +38,7 @@ export default {
         }        
       }).then((joke) => {
         console.log(joke)
-        this.joke = 'Card of chuck jokes',`${joke.value},`
+        this.joke = joke.value
       })
 
   
