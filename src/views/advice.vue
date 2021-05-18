@@ -4,7 +4,7 @@
 </div>
 <img alt="advice bild" class="picture" src="../assets/advice.jpg"/>
 <div class="main">
-  <Jokes/>
+  <Jokes :theitem = 'advice' , :title = 'title'/>
 </div>
 </template>
 
@@ -19,8 +19,40 @@ export default {
   name: ' advice_for_you',
   components: {
     Jokes
-  }
+  },
+
+  data(){
+    return{
+      advice: {},
+
+      title: {}
+    }
+
+  },
+
+  created(){
+
+      fetch("https://api.adviceslip.com/advice").then((response) => {
+        if (!response.ok) {
+          throw new Error("reload page.");
+        } else {
+          // Annars konverterar vi svaret till ett JS objekt
+          return response.json();
+        }        
+      }).then((advice) => {
+        console.log(advice.slip.advice)
+        this.advice = advice.slip.advice
+      })
+
+  
+      this.title = "The best advice you kan get"
+  },
+
+
+
 }
+
+
 </script>
 
 <style scoped>
