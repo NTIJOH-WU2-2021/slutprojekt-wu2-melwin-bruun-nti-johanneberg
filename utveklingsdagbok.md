@@ -33,3 +33,11 @@ det jag gjorde idag va att påbörja dem hämta dem olika aperierna och sedan si
 det jag lärde mig idag hur man använder fetch samt .then i vue för att skriva funktioner.
 den frågan jag har nu är varför kan jag inte impolera in rätt information på sidan.
 jag vill lära mig mer om props och metoder för att spara infromation. 
+
+
+ ## lektion-05-18
+
+ Det jag gjorde idag va göra  klar alla intra tioner med apierna och skall börja med att styla sidan mer.
+ Det jag lärde mig idag va hur vue funkar till en sån säker grund man kunde skriva utan några problem.
+ Har ingen fråga i nulägget
+ Jag vill lära mig mer om vue generellt samt pure css
