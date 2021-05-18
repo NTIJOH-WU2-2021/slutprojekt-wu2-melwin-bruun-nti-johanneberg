@@ -1,6 +1,6 @@
 <template>
-    <h2>{{theitem.title}}</h2>
-    <p>{{theitem.value}}</p>
+    <h2>{{title}}</h2>
+    <p>{{theitem}}</p>
 
 
     
@@ -18,7 +18,8 @@ export default {
    
   },
   props:{
-    theitem: Object
+    theitem: Object,
+    title: Object
      
 
   }
