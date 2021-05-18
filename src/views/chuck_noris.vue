@@ -2,9 +2,49 @@
   <div class="rubrik">
     <h1>Random Chuck Noris Jokes</h1>
   </div>
+
+   <div class="nav" v-if="joke">
+     <h2>Random joke of the day</h2>
+      <p>{{randomjoke}}</p>
+   </div>
+
+
+
   <img alt="CHUCK bild" class="picture" src="../assets/chucknorris.png"/>
-  <div class="main">
-    <Jokes :thejoke = 'joke' />
+
+   <h2>please select a category and we repli with a joke</h2>
+   <form class="pure-form">
+    <select 
+      type="text"
+      class="pure-select"
+      @keyup.enter="onsearchclick"
+      v-model="search"
+    >
+
+    <option>--- Select Category ---</option>
+     <option value="animal">animal</option>
+     <option value="career">career</option>
+     <option value="celebrity">celebrity</option>
+     <option value="dev">dev</option>
+     <option value="food">food</option>
+     <option value="fashion">fashion</option>
+     <option value="explicit">explicit</option>
+     <option value="history">history</option>
+     <option value="money">money</option>
+     <option value="movie">movie</option>
+     <option value="music">music</option>
+     <option value="political">political</option>
+     <option value="religion">religion</option>
+     <option value="science">science</option>
+     <option value="sport">sport</option>
+     <option value="travel">travel</option>
+    </select>
+  
+    <button  @click=" onsearchclick">🔍</button>
+  </form>
+
+  <div class="main" v-if="joke">
+    <Jokes :theitem = 'joke' , :title = 'title' />
   </div>
 </template>
 
@@ -22,7 +62,11 @@ export default {
   },
   data(){
     return{
-      joke: {}
+      joke: {},
+
+      title: {},
+
+      randomjoke:{}
     }
 
   },
@@ -36,14 +80,44 @@ export default {
           // Annars konverterar vi svaret till ett JS objekt
           return response.json();
         }        
-      }).then((joke) => {
-        console.log(joke)
-        this.joke = joke.value
+      }).then((ChuckJoke) => {
+        console.log(ChuckJoke.value)
+        this.randomjoke = ChuckJoke.value
+        
       })
 
   
-
+      fetch("https://api.chucknorris.io/jokes/categories").then((response) => {
+        if (!response.ok) {
+          throw new Error("reload page.");
+        } else {
+          // Annars konverterar vi svaret till ett JS objekt
+          return response.json();
+        }        
+      }).then((categories) => {
+        console.log(categories)
+        
+        
+      })
+      this.title = "The best chuck noris joke"
   },
+  methods:{
+
+    onsearchclick() {
+      fetch(`https://api.chucknorris.io/jokes/random?category=${this.search}`).then((response) => {
+        if (!response.ok) {
+          throw new Error("reload page.");
+        } else {
+          // Annars konverterar vi svaret till ett JS objekt
+          return response.json();
+        }        
+      }).then((ChuckJoke) => {
+        console.log(ChuckJoke.value)
+        this.joke = ChuckJoke.value
+      })
+
+  }
+  }
 }
 </script>
 
