@@ -1,17 +1,14 @@
 <template>
   <div class="rubrik">
-    <h1>Search for trump quotes</h1>
+    <h1>Randomize for trump quotes</h1>
   </div>
   <img alt="trump bild" class="picture1" src="../assets/trump.jpg"/>
   <form class="pure-form">
-    <input
-      type="text"
-      class="pure-input"
-      placeholder="Sök på key word"
-    />
+  
+    <button  @click="radomize"> genegera qoute</button>
   </form>
   <div class="main">
-    <Jokes/>
+    <Jokes :theitem = 'quote' , :title = 'title'/>
   </div>
 </template>
 
@@ -25,6 +22,37 @@ export default {
   name: 'trump',
   components: {
     Jokes
+  },
+   
+
+   data(){
+    return{
+      quote: {},
+
+      title: {}
+    }
+
+  },
+  created(){
+    this.title = " The best donald trumps quotes"
+  },
+
+  methods:{
+
+    radomize() {
+      fetch(`https://www.tronalddump.io/random/quote`).then((response) => {
+        if (!response.ok) {
+          throw new Error("reload page.");
+        } else {
+          // Annars konverterar vi svaret till ett JS objekt
+          return response.json();
+        }        
+      }).then((quote) => {
+        console.log(quote)
+        this.quote = quote.value
+      })
+
+  }
   }
 
   /*to do anropa apiet vid sökning skicka som en prop till jokes*/
@@ -56,5 +84,6 @@ export default {
   background-color: sandybrown;
 
 }
+
 
 </style>
