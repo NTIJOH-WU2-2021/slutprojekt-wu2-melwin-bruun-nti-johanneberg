@@ -70,7 +70,7 @@ export default {
   flex-direction: column;
   margin: 0 30rem;
   height: 30rem;
-  background-color: lightgrey
+  
 
 }
 
