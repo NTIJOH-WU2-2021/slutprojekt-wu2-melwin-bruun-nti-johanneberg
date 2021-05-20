@@ -13,15 +13,14 @@
   <img alt="CHUCK bild" class="picture" src="../assets/chucknorris.png"/>
 
    <h2>please select a category and we repli with a joke</h2>
-   <form class="pure-form">
-    <select 
+
+<div class="select"><select 
       type="text"
-      class="pure-select"
       @keyup.enter="onsearchclick"
       v-model="search"
     >
 
-    <option>--- Select Category ---</option>
+    <option selected disabled>--- Select Category ---</option>
      <option value="animal">animal</option>
      <option value="career">career</option>
      <option value="celebrity">celebrity</option>
@@ -40,9 +39,13 @@
      <option value="travel">travel</option>
     </select>
   
-    <button  @click=" onsearchclick">🔍</button>
-  </form>
+    
+</div>
+<button class="myButton" @click=" onsearchclick">🔍</button>
 
+   
+    
+ 
   <div class="main" v-if="joke">
     <Jokes :theitem = 'joke' , :title = 'title' />
   </div>
@@ -137,8 +140,87 @@ export default {
   flex-direction: column;
   margin: 0 30rem;
   height: 30rem;
-  background-color: lightblue;
+  
 
 }
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	background-color:#ffc477;
+	border-radius:18px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	background-color:#fb9e25;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+
 
 </style>
