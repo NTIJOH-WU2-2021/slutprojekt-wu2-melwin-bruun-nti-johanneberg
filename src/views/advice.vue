@@ -45,7 +45,7 @@ export default {
       })
 
   
-      this.title = "The best advice you kan get"
+      this.title = "The best advice you can get"
   },
 
 
