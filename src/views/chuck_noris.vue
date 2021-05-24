@@ -4,7 +4,7 @@
   </div>
 
    <div class="nav" v-if="joke">
-     <h2>Random joke of the day</h2>
+     <h2 >Random joke of the day</h2>
       <p>{{randomjoke}}</p>
    </div>
 
@@ -12,15 +12,16 @@
 
   <img alt="CHUCK bild" class="picture" src="../assets/chucknorris.png"/>
 
-   <h2>please select a category and we repli with a joke</h2>
+   <h2>please select a category and we reply with a joke</h2>
 
-<div class="select"><select 
+<div class="select">
+   <select 
       type="text"
       @keyup.enter="onsearchclick"
       v-model="search"
     >
 
-    <option selected disabled>--- Select Category ---</option>
+    <option value="">--- Select Category ---</option>
      <option value="animal">animal</option>
      <option value="career">career</option>
      <option value="celebrity">celebrity</option>
@@ -127,6 +128,22 @@ export default {
 
 <style scoped>
 
+.nav{
+  background-color: #f39c12;
+  margin: auto;
+  width: 50rem;
+  box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	background-color:#ffc477;
+	border-radius:18px;
+	border:1px solid #eeb44f;
+  margin-bottom: 2rem;
+}
+
+.nav h2 {    
+    font-size: 24px;
+}
+
 .picture{
   height: 20rem;
   width: 30rem;
@@ -179,6 +196,7 @@ select {
   border: 0 !important;
   background: #2c3e50;
   background-image: none;
+  font-size: 15px ;
 }
 /* Remove IE arrow */
 select::-ms-expand {
@@ -189,18 +207,20 @@ select::-ms-expand {
   position: relative;
   display: flex;
   align-items: center;
-  width: 20em;
+  width: 20rem;
   height: 3em;
   line-height: 3;
   background: #2c3e50;
   overflow: hidden;
   border-radius: .25em;
+  margin: auto
 }
 select {
   flex: 1;
   padding: 0 .5em;
   color: #fff;
   cursor: pointer;
+  
 }
 /* Arrow */
 .select::after {
