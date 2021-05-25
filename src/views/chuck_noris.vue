@@ -144,6 +144,10 @@ export default {
     font-size: 24px;
 }
 
+.nav p {
+  font-size: 20px;
+}
+
 .picture{
   height: 20rem;
   width: 30rem;
